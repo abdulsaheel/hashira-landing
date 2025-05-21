@@ -42,7 +42,7 @@ export function InteractiveEyes() {
   }, [])
 
   return (
-    <div ref={containerRef} className="relative w-[500px] h-[200px]">
+    <div ref={containerRef} className="relative w-[500px] h-[200px] top-[160px] left-[80px]">
       {/* Left Eyebrow - Tilted Inward */}
       <div className="absolute left-[110px] top-[-25px] -rotate-[80deg]">
         <Image src="/images/left-eyebrow.svg" alt="Left Eyebrow" width={120} height={90} />

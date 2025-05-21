@@ -4,7 +4,23 @@
 
 @font-face {
   font-family: "Suisse Intl";
-  src: url("/fonts/SuisseIntl-Regular.woff2") format("woff2");
+  src: url("/fonts/SuisseIntl-Thin.otf") format("opentype");
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Suisse Intl";
+  src: url("/fonts/SuisseIntl-Light.otf") format("opentype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Suisse Intl";
+  src: url("/fonts/SuisseIntl-Regular.otf") format("opentype");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -12,7 +28,39 @@
 
 @font-face {
   font-family: "Suisse Intl";
-  src: url("/fonts/SuisseIntl-Medium.woff2") format("woff2");
+  src: url("/fonts/SuisseIntl-Book.otf") format("opentype");
+  font-weight: 450;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Suisse Intl";
+  src: url("/fonts/SuisseIntl-Bold.otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Suisse Intl";
+  src: url("/fonts/SuisseIntl-Black.otf") format("opentype");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Suisse Intl Mono";
+  src: url("/fonts/SuisseIntl-Mono.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Suisse Intl";
+  src: url("/fonts/SuisseIntl-Medium.otf") format("woff2");
   font-weight: 500;
   font-style: normal;
   font-display: swap;
@@ -20,7 +68,7 @@
 
 @font-face {
   font-family: "Suisse Intl";
-  src: url("/fonts/SuisseIntl-Bold.woff2") format("woff2");
+  src: url("/fonts/SuisseIntl-Bold.otf") format("woff2");
   font-weight: 700;
   font-style: normal;
   font-display: swap;

@@ -3,7 +3,7 @@ import Link from "next/link"
 
 export function Header() {
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-8 py-4 bg-white">
+    <header className="flex items-center justify-between px-2 py-4 bg-white">
       <div className="flex items-center">
         <Link href="/" className="flex items-center">
           <Image src="/images/hashira-logomark.svg" alt="Hashira" width={30} height={30} className="mr-2" />
@@ -11,13 +11,16 @@ export function Header() {
         </Link>
       </div>
       <nav className="flex items-center space-x-8">
-        <Link href="#work" className="text-sm font-medium">
+        <Link href="#work" className="text-[24px] font-thin">
           WORK
         </Link>
-        <Link href="#careers" className="text-sm font-medium">
+        <Link href="#work" className="text-[24px] font-thin">
+          ABOUT US
+        </Link>
+        <Link href="#careers" className="text-[24px] font-thin">
           CAREERS
         </Link>
-        <Link href="#contact" className="text-sm font-medium">
+        <Link href="#contact" className="text-[24px] font-thin">
           CONTACT
         </Link>
       </nav>

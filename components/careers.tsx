@@ -4,44 +4,42 @@ import Link from "next/link"
 
 export function CareerSection() {
   return (
-    <section className="relative">
-      <div style={{ borderBottom: '2px solid #151515', margin: '0 10px' }}></div>
+    <section className="relative border-t-2 border-[#151515] mx-2">
 
-      <div className="grid grid-cols-1 md:grid-cols-[1fr_auto] items-start">
+      <div className="grid grid-cols-1 md:grid-cols-2 items-start">
         <div className="p-8 h-full">
           <div className="mb-2">
             <span className="section-number font-medium">05</span>
             <span className="section-title ml-2 font-medium">CAREER</span>
           </div>
-          <h2 className="text-5xl font-bold leading-tight mb-12">
-          WE'RE ALLWAYS
-          <br />
-          ON THE LOOKOUT
-          <br />
-          FOR NEW TALENT.
-        </h2>
+          <h2 className="text-5xl font-light leading-tight mb-12">
+            WE'RE ALLWAYS
+            <br />
+            ON THE LOOKOUT
+            <br />
+            FOR NEW TALENT.
+          </h2>
 <InteractiveEyes/>
         </div>
-        <div className="relative p-4 w-full" style={{ borderLeft: '2px solid #151515', paddingLeft: '8px' }}>
+        <div className="relative p-4 w-full border-l border-[#151515] pl-2">
           <div className="mb-2 px-4">
             <span className="section-number font-medium">06</span>
             <span className="section-title ml-2 font-medium">CAREERS2</span>
           </div>
           <div className="relative w-full">
-          <div className="absolute inset-0 flex items-center justify-center">
-          <Link href="#join-us" className="bg-hashira-red text-white px-8 py-3 rounded-full font-medium text-lg">
-            JOIN US
-          </Link>
-        </div>
+            <div className="absolute inset-0 flex items-center justify-center">
+              <Link href="#join-us" className="bg-hashira-red text-white px-8 py-3 rounded-full font-medium text-lg">
+                JOIN US
+              </Link>
+            </div>
             <Image
               src="/images/cta-section-1.png"
               alt="Sunset view of Japanese houses"
-              width={600}
+              width={800}
               height={857}
-              className="h-auto"
+              className="h-auto w-full"
             />
             <div className="absolute bottom-8 right-8">
-
               <Image
                 src="/images/hashira-logomark.svg"
                 alt="Hashira logo"
@@ -53,7 +51,7 @@ export function CareerSection() {
           </div>
         </div>
       </div>
-      <div style={{ borderBottom: '2px solid #151515', margin: '0 10px' }}></div>
+      <div className="border-b-2 border-[#151515] mx-2"></div>
     </section>
   )
 }

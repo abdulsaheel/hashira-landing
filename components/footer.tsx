@@ -36,11 +36,13 @@ export function Footer() {
 
       <div className="mt-12 mb-8">
         <Image
-          src="/images/hashira-logo-full.svg"
+          src="/images/hashira-wordmark.svg"
           alt="Hashira"
-          width={700}
-          height={120}
-          className="w-full max-w-3xl mx-auto hashira-red"
+          width={0}
+          height={0}
+          sizes="100vw"
+          className="w-full hashira-red"
+          style={{ width: '100%', height: 'auto' }}
         />
       </div>
 

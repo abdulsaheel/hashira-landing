@@ -18,7 +18,6 @@ const projects: Project[] = [
     images: [
       "/images/product-1.png",
       "/images/product-2.png",
-      "/images/product-3.png"
     ]
   },
   {
@@ -27,7 +26,6 @@ const projects: Project[] = [
     description: "Explorer is a powerful tool that allows users to navigate the blockchain with ease, providing detailed insights into transactions, smart contracts, and network performance across multiple chains.",
     images: [
       "/images/product-2.png",
-      "/images/product-3.png",
       "/images/product-1.png"
     ]
   },
@@ -36,7 +34,6 @@ const projects: Project[] = [
     title: "FAUCET",
     description: "Faucet is a service that distributes small amounts of cryptocurrency to developers and testers, enabling them to experiment with blockchain applications without risking real assets.",
     images: [
-      "/images/product-3.png",
       "/images/product-1.png",
       "/images/product-2.png"
     ]
@@ -48,7 +45,6 @@ const projects: Project[] = [
     images: [
       "/images/product-2.png",
       "/images/product-1.png",
-      "/images/product-3.png"
     ]
   },
   {
@@ -56,7 +52,6 @@ const projects: Project[] = [
     title: "SEASONS",
     description: "Seasons is a cyclical reward program that incentivizes community participation through exclusive drops, governance rights, and special access to new features.",
     images: [
-      "/images/product-3.png",
       "/images/product-2.png",
       "/images/product-1.png"
     ]
@@ -67,8 +62,7 @@ const projects: Project[] = [
     description: "Merry is a social platform that connects crypto enthusiasts and creators, fostering collaboration and knowledge sharing in a decentralized environment.",
     images: [
       "/images/product-1.png",
-      "/images/product-2.png",
-      "/images/product-3.png"
+      "/images/product-2.png"
     ]
   }
 ]
@@ -78,10 +72,11 @@ export function ProductsSection() {
   const currentProduct = projects.find(p => p.id === selectedProduct) || projects[0]
 
   return (
-    <section className="flex h-screen">
+    <section className="flex min-h-[600px] relative">
       {/* Left Side - Navigation */}
-      <div className="w-1/2 px-8 py-6 border-r border-gray-200 flex flex-col">
-        <div className="mb-6 flex justify-between items-center">
+      <div className="w-2/5 px-8 py-6 border-r border-black flex flex-col ml-[-2rem]">
+      
+        <div className="mb-6 flex justify-between items-center pl-4">
           <div>
             <span className="text-sm text-gray-500 mr-2">02</span>
             <span className="text-sm">WORK</span>
@@ -89,12 +84,12 @@ export function ProductsSection() {
           <div className="text-sm text-gray-500">/02</div>
         </div>
         
-        <div className="flex-grow">
-          <ul className="space-y-6">
+        <div>
+          <ul className="space-y-4 p-2">
             {projects.map(project => (
               <li
                 key={project.id}
-                className={`cursor-pointer transition-all duration-300 ${
+                className={`cursor-pointer transition-all duration-300 p-2 ${
                   selectedProduct === project.id 
                     ? "text-6xl font-bold text-red-500" 
                     : "text-2xl hover:text-gray-500"
@@ -109,7 +104,7 @@ export function ProductsSection() {
       </div>
 
       {/* Right Side - Product Details */}
-      <div className="w-1/2 px-8 py-6 flex flex-col">
+      <div className="w-3/5 px-8 py-6 flex flex-col">
         <div className="mb-6 flex justify-between items-center">
           <div>
             <span className="text-sm text-gray-500 mr-2">03</span>
@@ -120,9 +115,9 @@ export function ProductsSection() {
         
         {/* Product Description */}
         <div className="mb-8 pr-16">
-          <p className="text-sm mb-4 max-w-xl">{currentProduct.description}</p>
-          <div className="flex justify-end">
-            <div className="rounded-full border border-gray-300 p-2 cursor-pointer">
+          <div className="flex items-start justify-between gap-4">
+            <p className="text-sm max-w-xl">{currentProduct.description}</p>
+            <div className="rounded-full border border-gray-300 p-2 cursor-pointer flex-shrink-0">
               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                 <path d="M7 17L17 7M17 7H7M17 7V17" />
               </svg>
@@ -131,9 +126,9 @@ export function ProductsSection() {
         </div>
         
         {/* Product Images */}
-        <div className="flex-grow grid grid-cols-3 gap-4">
+        <div className="grid grid-cols-3 gap-4">
           {currentProduct.images.map((image, index) => (
-            <div key={index} className="relative rounded-sm overflow-hidden h-full">
+            <div key={index} className="relative rounded-sm overflow-hidden aspect-square">
               <Image
                 src={image}
                 alt={`${currentProduct.title}`}
@@ -144,6 +139,9 @@ export function ProductsSection() {
           ))}
         </div>
       </div>
+      
+      {/* Bottom Border */}
+      <div className="absolute bottom-0 left-0 right-0 border-b-2 border-[#151515] mx-2"></div>
     </section>
   )
 }
